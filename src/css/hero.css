@@ -1,0 +1,131 @@
+.mainBox {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 4rem;
+
+}
+
+.mainBox .left-half {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0px 40px;
+}
+
+.mainBox .left-half h2 {
+    font-size: 3rem;
+}
+
+.mainBox .left-half .black {
+    color: black;
+}
+
+.mainBox .left-half .blue {
+    color: blue;
+}
+
+.mainBox .left-half .searchBox {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.mainBox .left-half .searchBox input {
+    width: 24rem;
+    height: 2.5rem;
+    padding: 5px 20px;
+    border: none;
+    border: 2px solid rgb(205, 196, 183);
+    transform: all;
+    border-radius: 10px;
+}
+
+.mainBox .left-half .searchBox button {
+    border: none;
+    height: 3rem;
+    width: 10rem;
+    padding: 10px 20px;
+    background-color: blue;
+    border-radius: 10px;
+    transition: all;
+    color: white;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+input:focus,
+input:focus::placeholder {
+    outline: none;
+    font-size: 1rem;
+    font-weight: bolder;
+
+}
+
+.mainBox .left-half p {
+    font-size: 1rem;
+    color: rgb(120, 120, 120);
+    line-height: 1.5;
+}
+
+.mainBox .right-half img {
+    width: 25rem;
+    height: auto;
+}
+
+.mainBox .right-half {
+    padding: 0px 40px;
+}
+
+.option {
+    padding-left: 6rem;
+}
+
+.option ol {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 3px 10px;
+    width: 38.5rem;
+
+}
+
+.option ol .indicator {
+    color: black;
+    font-weight: bolder;
+}
+
+.option li {
+    color: blue;
+    transition: all;
+}
+
+.option li:hover {
+    font-weight: bolder;
+    border-bottom: 1px solid blue;
+}
+
+.option .indicator:hover {
+    font-weight: bolder;
+    border: none;
+}
+
+.heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem 6rem
+}
+
+.heading p{
+    font-size: medium;
+    color: blue;
+}

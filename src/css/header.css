@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header {
+    border: 1px solid rgb(228, 226, 226);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: bisque;
+    padding: 5px 1.5rem
+}
+
+.header span {
+    color: black;
+}
+
+.header h1 {
+    color: blue;
+    font-weight: bolder;
+    padding: 10px 15px;
+}
+
+.header ul {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    list-style-type: none;
+    transition: all .2ms;
+}
+
+.header ul li {
+    color: black;
+    padding: 10px 15px;
+
+    font-size: 1rem;
+
+}
+
+.header .btnBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.header button {
+    border: none;
+    padding: .7rem 1.2rem;
+
+    border: 2px solid blue;
+    background-color: transparent;
+    border-radius: .5rem;
+    font-weight: 700;
+    padding: 10px 2rem;
+
+    transition: all;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row; */
+
+}
+
+.header .signUpBtn {
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    /* margin-right: 20px; */
+}
+
+.header li:hover {
+    color: blue;
+    border-bottom: 2px solid blue;
+    background-color: #f7f4f4;
+    /* border-radius: 10px; */
+}
+
+.header button:active,
+li:active {
+    transform: scale(.90);
+
+}
+
+.header .signUpBtn:active {
+    background-color: transparent;
+    color: black;
+}
+
+.header .loginBtn:active {
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,90 @@
+.mainContainer {
+    border: 1px solid rgb(174, 174, 174);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    /* gap: 1.3rem; */
+    width: 20rem;
+    height: auto;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px gray;
+    flex-shrink: 0;
+
+
+}
+
+.mainContainer .rightHalf {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: column;
+    /* padding: 1rem; */
+    gap: .6rem;
+
+}
+
+.mainContainer .rightHalf .head {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+
+}
+
+.mainContainer .leftHalf h2 {
+    /* border: 1px solid red; */
+    padding: .7rem;
+    border-radius: 10px;
+    background-color: blueviolet;
+}
+
+.mainContainer .rightHalf ul {
+    list-style-type: none;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+
+}
+
+.rightHalf h3 {
+    font-weight: bolder;
+}
+
+.rightHalf p {
+    color: rgb(108, 107, 107);
+    line-height: 1.5;
+}
+
+.rightHalf h4 {
+    font-weight: bolder;
+    color: blue;
+}
+
+.rightHalf h6 {
+    color: red;
+    font-weight: bolder;
+    font-size: .6rem;
+    border-bottom: 1px solid red;
+}
+
+.rightHalf .actionBox {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.rightHalf button {
+    border: none;
+    padding: .5rem 1.2rem;
+    background-color: transparent;
+    border: 1.5px solid blue;
+    border-radius: 10px;
+    color: blue;
+    transition: all;
+}
+
+.rightHalf button:active {
+    background-color: blue;
+    color: aliceblue;
+}
