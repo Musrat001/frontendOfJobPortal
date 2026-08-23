@@ -32,12 +32,15 @@
 
 }
 
-.mainContainer .leftHalf h2 {
+.mainContainer .leftHalf img {
     /* border: 1px solid red; */
-    padding: .7rem;
-    border-radius: 10px;
-    background-color: blueviolet;
+    height: 4rem;
+    width: auto;
+    object-fit: cover;
+
 }
+
+
 
 .mainContainer .rightHalf ul {
     list-style-type: none;

@@ -1,0 +1,39 @@
+.footerContainer {
+    /* border: 1px solid red; */
+    width: 15rem;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-left: 6rem; */
+    flex-shrink: 0;
+    gap: 1rem;
+    padding: .5rem 1rem;
+
+
+}
+
+.footerContainer .icon {
+    width: 3rem;
+    height: 3rem;
+    /* border: 1px solid green; */
+    padding: 2px;
+    border-radius: 50%;
+    background-color: rgba(131, 193, 224, 0.359);
+}
+
+.footerContainer .paras {
+    /* border: 1px solid green; */
+    line-height: 1.5;
+    padding: 5px;
+    font-size: 1rem;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.footerContainer .paras p {
+    font-size: .8rem;
+    color: rgb(92, 91, 90);
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import "../../css/jobBox.css";
-function JobBox() {
+function JobBox({image}) {
   return (
     <div className="mainContainer">
       <div className="leftHalf">
-        <h2>Logo</h2>
+        <img src={image} alt="" />
       </div>
       <div className="rightHalf">
         <div className="head">

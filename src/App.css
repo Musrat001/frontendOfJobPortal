@@ -1,3 +1,4 @@
+
 .jobBoxConatiner {
     /* padding: 0px 6rem; */
     display: flex;
@@ -12,6 +13,16 @@
     display: none;
 }
 
-/* .jobBoxConatiner .rightHalf{
+.footerMainContainer {
+    /* width: 100vw; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-shrink: 0;
+    margin: 3rem 6rem;
+    border: 1px solid rgba(131, 193, 224, 0.359);
+    border-radius: 10px;
+    background-color: rgba(169, 243, 243, 0.06);
 
-} */
+
+}

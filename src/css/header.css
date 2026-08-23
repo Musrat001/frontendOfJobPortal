@@ -87,7 +87,7 @@ li:active {
 
 }
 
-.header .signUpBtn:active {
+/* .header .signUpBtn:active {
     background-color: transparent;
     color: black;
 }
@@ -95,4 +95,4 @@ li:active {
 .header .loginBtn:active {
     background-color: blue;
     color: white;
-}
+} */
