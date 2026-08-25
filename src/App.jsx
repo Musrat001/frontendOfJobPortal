@@ -1,8 +1,8 @@
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import Hero from "./components/homePage/Hero";
 import JobBox from "./components/homePage/JobBox";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 import tcsLogo from "./assets/tcslogo.jpg";
 import amazonLogo from "./assets/amazonlogo.jpg";
 import microsoftLogo from "./assets/microsoftlogo.png";
