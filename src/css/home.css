@@ -1,0 +1,13 @@
+.jobBoxConatiner {
+    /* padding: 0px 6rem; */
+    display: flex;
+    gap: 2rem;
+    /* border: 1px solid red; */
+    overflow: auto;
+    /* overflow: hidden; */
+    margin: 0px 6rem;
+}
+
+.jobBoxConatiner::-webkit-scrollbar {
+    display: none;
+}
