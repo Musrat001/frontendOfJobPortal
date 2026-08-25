@@ -6,6 +6,12 @@ import Footer from "./components/Footer";
 import tcsLogo from "./assets/tcslogo.jpg";
 import amazonLogo from "./assets/amazonlogo.jpg";
 import microsoftLogo from "./assets/microsoftlogo.png";
+import {
+  FiBriefcase,
+  FiUsers,
+  FiShield,
+  FiClock
+} from "react-icons/fi";
 
 function App() {
   return (
@@ -20,10 +26,10 @@ function App() {
         <JobBox image={microsoftLogo} />
       </div>
       <div className="footerMainContainer">
-        <Footer title="Thousand of job" des="Find the right fit for you" />
-        <Footer title="Top Companies" des="Apply to leading companies" />
-        <Footer title="Trusted Platform" des="Secure and Reliable" />
-        <Footer title="Easy and Fast" des="Quick application process" />
+        <Footer  icon= {FiBriefcase} title="Thousand of job" des="Find the right fit for you" />
+        <Footer icon= {FiUsers} title="Top Companies" des="Apply to leading companies" />
+        <Footer icon= {FiShield} title="Trusted Platform" des="Secure and Reliable" />
+        <Footer icon= {FiClock} title="Easy and Fast" des="Quick application process" />
       </div>
     </>
   );

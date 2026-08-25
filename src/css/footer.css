@@ -21,6 +21,11 @@
     padding: 2px;
     border-radius: 50%;
     background-color: rgba(131, 193, 224, 0.359);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color:blue;
 }
 
 .footerContainer .paras {
