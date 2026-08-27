@@ -34,7 +34,8 @@
     transition: all .2ms;
 }
 
-.header ul li {
+.header .NavLink {
+    text-decoration: none;
     color: black;
     padding: 10px 15px;
 
@@ -68,17 +69,32 @@
 }
 
 .header .signUpBtn {
+
     background-color: blue;
     color: white;
     font-weight: 700;
     /* margin-right: 20px; */
 }
 
-.header li:hover {
+.header .register {
+    text-decoration: none;
+    color: white;
+}
+
+.header .login {
+    text-decoration: none;
+    color: black;
+}
+
+.header .NavLink:hover {
     color: blue;
     border-bottom: 2px solid blue;
     background-color: #f7f4f4;
     /* border-radius: 10px; */
+}
+
+.header li .NavLink.active {
+    color: blue;
 }
 
 .header button:active,
