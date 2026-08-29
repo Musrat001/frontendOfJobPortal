@@ -10,7 +10,8 @@
     align-items: center;
     justify-content: space-between;
     color: bisque;
-    padding: 5px 1.5rem
+    padding: 5px 1.5rem;
+    background-color: white;
 }
 
 .header span {

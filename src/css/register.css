@@ -1,0 +1,581 @@
+* {
+    box-sizing: border-box;
+}
+
+.register-page {
+    min-height: 100vh;
+    /* background: #f8fafc; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 42px 20px;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    color: #17213a;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.register-container {
+    width: 100%;
+    max-width: 1015px;
+    min-height: 645px;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    background: white;
+
+    border: 1px solid #dce5f2;
+    border-radius: 11px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(20, 45, 90, 0.04);
+}
+
+
+/* ================= LEFT ================= */
+
+.register-left {
+    background: #f1f5ff;
+    padding: 31px 30px;
+
+    border-right: 1px solid #e1e8f3;
+
+    position: relative;
+}
+
+.brand {
+    color: #0759ed;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.register-left h1 {
+    font-size: 25px;
+    line-height: 1.2;
+    margin: 0 0 10px;
+
+    color: #121b32;
+    font-weight: 750;
+}
+
+.left-description {
+    margin: 0;
+
+    color: #33415c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.womenImage img {
+    width: 18rem;
+    height: auto;
+    object-fit: cover;
+    margin: 1rem 0rem;
+}
+
+
+/* ================= BENEFITS ================= */
+
+.benefits {
+    margin-top: 0;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+
+    font-size: 12px;
+    color: #26354f;
+}
+
+.benefit svg {
+    flex-shrink: 0;
+
+    width: 17px;
+    height: 17px;
+
+    padding: 3px;
+
+    background: #1763ec;
+
+    color: white;
+
+    border-radius: 50%;
+}
+
+
+/* Login */
+
+.login-text {
+    margin-top: 41px;
+
+    font-size: 13px;
+
+    color: #33415d;
+}
+
+.login-text a {
+    margin-left: 4px;
+
+    color: #005df4;
+
+    font-weight: 600;
+
+    text-decoration: underline;
+}
+
+
+/* ================= RIGHT ================= */
+
+.register-right {
+    background: white;
+
+    padding: 28px 43px;
+}
+
+.form-wrapper {
+    max-width: 530px;
+    margin: 0 auto;
+}
+
+.form-wrapper h2 {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: 750;
+
+    color: #111a30;
+}
+
+.form-subtitle {
+    margin: 6px 0 25px;
+
+    color: #3c4860;
+
+    font-size: 13px;
+}
+
+
+/* ================= FORM ================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 28px;
+
+    margin-bottom: 18px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 650;
+
+    color: #202b40;
+
+    margin-bottom: 7px;
+}
+
+.form-group label span {
+    color: #ef3434;
+}
+
+.form-group input,
+.select-wrapper select {
+    width: 100%;
+    height: 37px;
+
+    border: 1px solid #d4deec;
+
+    border-radius: 6px;
+
+    padding: 0 11px;
+
+    font-size: 12px;
+
+    color: #26344e;
+
+    background: white;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #78849a;
+}
+
+.form-group input:focus,
+.select-wrapper select:focus {
+    border-color: #2168ef;
+
+    box-shadow:
+        0 0 0 2px rgba(33, 104, 239, 0.08);
+}
+
+
+/* Password */
+
+.password-input {
+    position: relative;
+}
+
+.password-input input {
+    padding-right: 40px;
+}
+
+.password-input button {
+    position: absolute;
+
+    right: 9px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #68758b;
+
+    cursor: pointer;
+
+    padding: 3px;
+
+    display: flex;
+}
+
+.password-input button svg {
+    font-size: 16px;
+}
+
+.form-group small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #55647d;
+
+    font-size: 10px;
+}
+
+
+/* Phone */
+
+.phone-input {
+    display: flex;
+
+    height: 37px;
+
+    border: 1px solid #d4deec;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+.phone-input:focus-within {
+    border-color: #2168ef;
+}
+
+.country-code {
+    min-width: 105px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 10px;
+
+    border-right: 1px solid #d4deec;
+
+    color: #43516a;
+
+    font-size: 12px;
+}
+
+.country-code svg {
+    margin-left: auto;
+
+    font-size: 14px;
+}
+
+.india-flag {
+    font-size: 16px;
+}
+
+.phone-input input {
+    border: none;
+
+    border-radius: 0;
+
+    height: 35px;
+}
+
+.phone-input input:focus {
+    box-shadow: none;
+}
+
+
+/* Select */
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+
+    cursor: pointer;
+
+    padding-right: 35px;
+
+    color: #738098;
+}
+
+.select-wrapper svg {
+    position: absolute;
+
+    right: 11px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    color: #60708a;
+
+    font-size: 15px;
+}
+
+
+/* ================= TERMS ================= */
+
+.terms {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 3px;
+    margin-bottom: 17px;
+}
+
+.terms input {
+    appearance: none;
+
+    width: 14px;
+    height: 14px;
+
+    border: 1.5px solid #2672ef;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.terms input:checked {
+    background: #1763ec;
+
+    box-shadow:
+        inset 0 0 0 3px white;
+}
+
+.terms label {
+    font-size: 11px;
+
+    color: #35435c;
+}
+
+.terms a {
+    color: #075eef;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+/* ================= REGISTER BUTTON ================= */
+
+.register-btn {
+    width: 100%;
+    height: 37px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #0957ed;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.register-btn:hover {
+    background: #0049d7;
+}
+
+.register-btn svg {
+    font-size: 16px;
+}
+
+
+/* ================= DIVIDER ================= */
+
+.divider {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 25px 0;
+}
+
+.divider span {
+    height: 1px;
+
+    background: #dce3ed;
+
+    flex: 1;
+}
+
+.divider p {
+    margin: 0;
+
+    color: #4e5c73;
+
+    font-size: 11px;
+}
+
+
+/* ================= SOCIAL ================= */
+
+.social-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.social-btn {
+    height: 41px;
+
+    background: white;
+
+    border: 1px solid #d7e0ec;
+
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #344056;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.social-btn:hover {
+    background: #f8fafc;
+
+    border-color: #bfcbdc;
+}
+
+.social-btn svg {
+    font-size: 18px;
+}
+
+.linkedin-icon {
+    color: #0a66c2;
+}
+
+.microsoft-icon {
+    color: #f25022;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .register-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .register-left {
+        display: none;
+    }
+
+    .register-right {
+        padding: 35px 30px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .register-page {
+        padding: 20px 10px;
+    }
+
+    .register-right {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .social-buttons {
+        grid-template-columns: 1fr;
+    }
+
+}
