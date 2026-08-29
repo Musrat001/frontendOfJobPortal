@@ -1,5 +1,5 @@
 #FRONTEND OF JOB PORTAL
-A minor project of build in JAMIA MILLIA ISLAMIA.
+A minor project of build in JAMIA MILLIA ISLAMIA.<br>
 #Feature Built so far
     1) Header
     2)Footer
