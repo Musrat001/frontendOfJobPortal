@@ -1,9 +1,118 @@
-import React from 'react'
-
+import "../../css/login.css";
+import { Link } from "react-router";
+import menoflogin from "../../assets/menoflogin.png";
+import { FiSearch, FiBookmark, FiBell } from "react-icons/fi";
+import { FcGoogle } from "react-icons/fc";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FiShield } from "react-icons/fi";
 function Login() {
   return (
-    <div>Login</div>
-  )
+    <div id="mainContainer">
+      <div className="leftContainer">
+        <div className="head">
+          <h2>Welcome back</h2>
+          <p>Login through your accout to take next step in your career</p>
+        </div>
+        <img src={menoflogin} alt="image" />
+        <div className="option-text">
+          <div className="optionBox">
+            <div className="icon">
+              <FiSearch />
+            </div>
+            <p>Find the right opportunities</p>
+          </div>
+          <div className="optionBox">
+            <div className="icon">
+              <FiBookmark />
+            </div>
+            <p>Traack your application</p>
+          </div>
+          <div className="optionBox">
+            <div className="icon">
+              <FiBell />
+            </div>
+            <p>Get personalised notification</p>
+          </div>
+        </div>
+        <div className="registerInstead">
+          <p>
+            Don't have an account? <Link to={"./register"}>Register</Link>
+          </p>
+        </div>
+      </div>
+      <div className="rightContainer">
+        <div className="topContents">
+          <div className="head">
+            <h2>Log In </h2>
+            <p>Welcom Back ! Enter your details</p>
+          </div>
+          <div className="inputContainer">
+            <label htmlFor="email">Email </label>
+            <input
+              className="input"
+              type="email"
+              placeholder="Enter your Email Address"
+              name="email"
+            />
+            <label htmlFor="password">Password</label>
+            <input
+              className="input"
+              type="password"
+              placeholder="Enter your password"
+              name="password"
+            />
+          </div>
+          <p className="forgetpassword">
+            <Link>Forget password</Link>
+          </p>
+          <div className="remember">
+            <input type="checkbox" name="remember_me" id="rememberMe" />
+            <label htmlFor="remember">Remember me</label>
+          </div>
+
+          <div className="submitBtn">
+            <button type="submit"> Login In</button>
+          </div>
+        </div>
+        <div className="bottomContents">
+          <div class="divider">
+            <span></span>
+            <p>or continue with</p>
+            <span></span>
+          </div>
+          <div className="socialContainer">
+            <button className="socialBtn">
+              <FcGoogle className="socialIcon google" />
+              <span>Google</span>
+            </button>
+
+            <button className="socialBtn">
+              <FaLinkedinIn className="socialIcon linkedin" />
+              <span>LinkedIn</span>
+            </button>
+
+            <button className="socialBtn">
+              <FaGithub className="socialIcon microsoft" />
+              <span>GitHub</span>
+            </button>
+          </div>
+        </div>
+        <div className="bottomBox">
+          <div className="securityBox">
+            <FiShield className="securityIcon" />
+
+            <div className="securityText">
+              <h4>Your data is safe with us</h4>
+              <p>
+                We use industry-standard security to protect your information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Login
+export default Login;
