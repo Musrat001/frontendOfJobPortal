@@ -104,12 +104,333 @@ li:active {
 
 }
 
-/* .header .signUpBtn:active {
-    background-color: transparent;
+/* ========================================
+   GLOBAL RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS',
+        'Lucida Sans Unicode',
+        'Lucida Grande',
+        'Lucida Sans',
+        Arial,
+        sans-serif;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    border: 1px solid rgb(228, 226, 226);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: bisque;
+    padding: 5px 1.5rem;
+    background-color: white;
+    min-height: 70px;
+    position: relative;
+}
+
+.header span {
     color: black;
 }
 
-.header .loginBtn:active {
+
+/* ========================================
+   LOGO
+======================================== */
+
+.header h1 {
+    color: blue;
+    font-weight: bolder;
+    padding: 10px 15px;
+    font-size: 1.8rem;
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.header ul {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    list-style-type: none;
+}
+
+.header .NavLink {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   NAVIGATION HOVER / ACTIVE
+======================================== */
+
+.header .NavLink:hover {
+    color: blue;
+    border-bottom: 2px solid blue;
+    background-color: #f7f4f4;
+}
+
+.header li .NavLink.active {
+    color: blue;
+}
+
+
+/* ========================================
+   BUTTON BOX
+======================================== */
+
+.header .btnBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.header button {
+    border: 2px solid blue;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    padding: 10px 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.header .signUpBtn {
     background-color: blue;
     color: white;
-} */
+    font-weight: 700;
+}
+
+.header .register {
+    text-decoration: none;
+    color: white;
+}
+
+.header .login {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ========================================
+   BUTTON HOVER
+======================================== */
+
+.header button:hover {
+    transform: translateY(-2px);
+}
+
+.header .signUpBtn:hover {
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   ACTIVE
+======================================== */
+
+.header button:active,
+.header li:active {
+    transform: scale(0.9);
+}
+
+
+/* ========================================
+   TABLET - 1024px
+======================================== */
+
+@media (max-width: 1024px) {
+
+    .header {
+        padding: 5px 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+        padding: 10px;
+    }
+
+    .header ul {
+        gap: 1rem;
+    }
+
+    .header .NavLink {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .header .btnBox {
+        gap: 0.6rem;
+    }
+
+    .header button {
+        padding: 8px 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ========================================
+   MOBILE - 768px
+======================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 5px 1rem;
+        min-height: 65px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+
+    /* Navigation */
+
+    .header ul {
+        gap: 0.5rem;
+    }
+
+    .header .NavLink {
+        padding: 7px;
+        font-size: 0.8rem;
+    }
+
+
+    /* Buttons */
+
+    .header .btnBox {
+        gap: 0.5rem;
+    }
+
+    .header button {
+        padding: 7px 0.8rem;
+        font-size: 0.75rem;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE - 600px
+======================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 5px 0.8rem;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .header ul {
+        gap: 0.2rem;
+    }
+
+    .header .NavLink {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+
+    .header .btnBox {
+        gap: 0.3rem;
+    }
+
+    .header button {
+        padding: 6px 0.6rem;
+        font-size: 0.7rem;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE - 480px
+======================================== */
+
+@media (max-width: 480px) {
+
+    .header {
+        flex-wrap: wrap;
+        padding: 8px 1rem;
+        gap: 0.5rem;
+    }
+
+    .header h1 {
+        font-size: 1.3rem;
+        padding: 5px;
+    }
+
+    .header ul {
+        order: 3;
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+        padding: 5px 0;
+        border-top: 1px solid #eee;
+    }
+
+    .header .NavLink {
+        font-size: 0.75rem;
+        padding: 6px;
+    }
+
+    .header .btnBox {
+        gap: 0.4rem;
+    }
+
+    .header button {
+        padding: 6px 0.7rem;
+        font-size: 0.7rem;
+    }
+}
+
+
+/* ========================================
+   EXTRA SMALL MOBILE - 360px
+======================================== */
+
+@media (max-width: 360px) {
+
+    .header h1 {
+        font-size: 1.1rem;
+    }
+
+    .header .NavLink {
+        font-size: 0.65rem;
+        padding: 5px;
+    }
+
+    .header button {
+        padding: 5px 0.5rem;
+        font-size: 0.65rem;
+    }
+}

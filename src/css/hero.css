@@ -125,7 +125,401 @@ input:focus::placeholder {
     padding: 1rem 6rem
 }
 
-.heading p{
+.heading p {
     font-size: medium;
     color: blue;
+}
+
+/* ========================================
+   MAIN HERO SECTION
+======================================== */
+
+.mainBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    gap: 2rem;
+}
+
+.mainBox .left-half {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 40px;
+}
+
+.mainBox .left-half h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.mainBox .left-half .black {
+    color: black;
+}
+
+.mainBox .left-half .blue {
+    color: blue;
+}
+
+
+/* ========================================
+   SEARCH BOX
+======================================== */
+
+.mainBox .left-half .searchBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+}
+
+.mainBox .left-half .searchBox input {
+    width: 24rem;
+    height: 2.5rem;
+    padding: 5px 20px;
+    border: 2px solid rgb(205, 196, 183);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.mainBox .left-half .searchBox button {
+    border: none;
+    height: 3rem;
+    width: 10rem;
+    padding: 10px 20px;
+    background-color: blue;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    color: white;
+    cursor: pointer;
+}
+
+.mainBox .left-half .searchBox button:active {
+    transform: scale(0.95);
+}
+
+.mainBox .left-half .searchBox input:focus {
+    outline: none;
+    border-color: blue;
+}
+
+.mainBox .left-half .searchBox input:focus::placeholder {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.mainBox .left-half p {
+    font-size: 1rem;
+    color: rgb(120, 120, 120);
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   RIGHT IMAGE
+======================================== */
+
+.mainBox .right-half {
+    padding: 0 40px;
+}
+
+.mainBox .right-half img {
+    width: 25rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ========================================
+   OPTIONS
+======================================== */
+
+.option {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.option ol {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 3px 10px;
+    width: 38.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.option ol .indicator {
+    color: black;
+    font-weight: bolder;
+}
+
+.option li {
+    color: blue;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.option li:hover {
+    font-weight: bolder;
+    border-bottom: 1px solid blue;
+}
+
+.option .indicator:hover {
+    font-weight: bolder;
+    border: none;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem 6rem;
+}
+
+.heading p {
+    font-size: medium;
+    color: blue;
+}
+
+
+/* ========================================
+   TABLET - 1024px
+======================================== */
+
+@media (max-width: 1024px) {
+
+    .mainBox {
+        padding: 0 2rem;
+        gap: 1rem;
+    }
+
+    .mainBox .left-half {
+        padding: 0 20px;
+    }
+
+    .mainBox .left-half h2 {
+        font-size: 2.5rem;
+    }
+
+    .mainBox .left-half .searchBox {
+        gap: 1rem;
+    }
+
+    .mainBox .left-half .searchBox input {
+        width: 20rem;
+    }
+
+    .mainBox .left-half .searchBox button {
+        width: 8rem;
+    }
+
+    .mainBox .right-half {
+        padding: 0 20px;
+    }
+
+    .mainBox .right-half img {
+        width: 20rem;
+    }
+
+    .option {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .option ol {
+        width: 35rem;
+    }
+
+    .heading {
+        padding: 1rem 3rem;
+    }
+}
+
+
+/* ========================================
+   MOBILE - 768px
+======================================== */
+
+@media (max-width: 768px) {
+
+    .mainBox {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .mainBox .left-half {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .mainBox .left-half h2 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .mainBox .left-half p {
+        font-size: 0.95rem;
+        max-width: 600px;
+    }
+
+
+    /* Search becomes vertical */
+
+    .mainBox .left-half .searchBox {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+
+    .mainBox .left-half .searchBox input {
+        width: 100%;
+        height: 2.8rem;
+    }
+
+    .mainBox .left-half .searchBox button {
+        width: 100%;
+        height: 2.8rem;
+    }
+
+
+    /* Image */
+
+    .mainBox .right-half {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mainBox .right-half img {
+        width: 20rem;
+        max-width: 80%;
+    }
+
+
+    /* Options */
+
+    .option {
+        padding: 0 1.5rem;
+    }
+
+    .option ol {
+        width: 100%;
+        gap: 1rem;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 8px 5px;
+    }
+
+    .option ol::-webkit-scrollbar {
+        display: none;
+    }
+
+    .option li {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+
+    /* Heading */
+
+    .heading {
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .heading h2 {
+        font-size: 1.4rem;
+    }
+
+    .heading p {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE - 480px
+======================================== */
+
+@media (max-width: 480px) {
+
+    .mainBox {
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .mainBox .left-half h2 {
+        font-size: 1.8rem;
+    }
+
+    .mainBox .left-half p {
+        font-size: 0.9rem;
+    }
+
+    .mainBox .left-half .searchBox input {
+        height: 2.6rem;
+        padding: 5px 15px;
+    }
+
+    .mainBox .left-half .searchBox button {
+        height: 2.6rem;
+    }
+
+    .mainBox .right-half img {
+        width: 17rem;
+        max-width: 90%;
+    }
+
+
+    /* Options */
+
+    .option {
+        padding: 0 1rem;
+    }
+
+    .option ol {
+        gap: 1.2rem;
+        font-size: 0.9rem;
+    }
+
+
+    /* Heading */
+
+    .heading {
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .heading h2 {
+        font-size: 1.2rem;
+    }
+
+    .heading p {
+        font-size: 0.8rem;
+    }
 }
