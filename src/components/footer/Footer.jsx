@@ -1,4 +1,3 @@
-
 import { FiBriefcase, FiUsers, FiShield, FiClock } from "react-icons/fi";
 import FooterBox from "./FooterBox";
 function Footer() {

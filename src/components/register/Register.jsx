@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FiSearch,
   FiUser,
@@ -19,6 +20,46 @@ import "../../css/register.css";
 function Register() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [username, setusername] = useState("");
+  const [userType, setuserType] = useState("");
+  const [password, setpassword] = useState("");
+  const [phoneNumber, setphoneNumber] = useState("       ");
+  const navigate = useNavigate();
+
+  const registerObj = {
+    name,
+    email,
+    password,
+    username,
+    userType,
+    phoneNumber,
+  };
+
+  const handleSubmit = async () => {
+    // e.preventDefault();
+    try {
+      const response = await fetch(
+        "http://localhost:7052/api/v1/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(registerObj),
+          credentials: "include",
+        },
+      );
+      const data = await response.json();
+      alert(data.message);
+
+      navigate("/login");
+      console.log(data);
+    } catch (error) {
+      console.log("error While Registering user: ", error);
+    }
+  };
 
   return (
     <div className="register-page">
@@ -84,7 +125,11 @@ function Register() {
                   Full Name <span>*</span>
                 </label>
 
-                <input type="text" placeholder="Enter your full name" />
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  onChange={(e) => setname(e.target.value)}
+                />
               </div>
 
               <div className="form-group">
@@ -92,7 +137,22 @@ function Register() {
                   Email Address <span>*</span>
                 </label>
 
-                <input type="email" placeholder="Enter your email address" />
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  onChange={(e) => setemail(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label>
+                  Set Username <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Enter your username"
+                  onChange={(e) => setusername(e.target.value)}
+                />
               </div>
             </div>
 
@@ -107,6 +167,7 @@ function Register() {
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Create a password"
+                    onChange={(e) => setpassword(e.target.value)}
                   />
 
                   <button
@@ -154,7 +215,11 @@ function Register() {
                   <FiChevronDown />
                 </div>
 
-                <input type="tel" placeholder="Enter your phone number" />
+                <input
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  onChange={(e) => setphoneNumber(e.target.value)}
+                />
               </div>
             </div>
 
@@ -163,24 +228,17 @@ function Register() {
               <label>Current Role</label>
 
               <div className="select-wrapper">
-                <select defaultValue="">
+                <select
+                  defaultValue=""
+                  onChange={(e) => setuserType(e.target.value)}
+                >
                   <option value="" disabled>
                     Select your current role
                   </option>
 
-                  <option>Student</option>
+                  <option>Candidate</option>
 
-                  <option>Software Developer</option>
-
-                  <option>Frontend Developer</option>
-
-                  <option>Backend Developer</option>
-
-                  <option>Full Stack Developer</option>
-
-                  <option>Designer</option>
-
-                  <option>Other</option>
+                  <option>Recruiter</option>
                 </select>
 
                 <FiChevronDown />
@@ -198,7 +256,7 @@ function Register() {
             </div>
 
             {/* Register Button */}
-            <button className="register-btn">
+            <button className="register-btn" onClick={handleSubmit}>
               <FiUserPlus />
               Register
             </button>
@@ -229,7 +287,7 @@ function Register() {
               <button className="social-btn">
                 <FaGithub className="microsoft-icon" />
 
-                <span>Microsoft</span>
+                <span>Git Hub</span>
               </button>
             </div>
           </div>

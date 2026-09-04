@@ -6,7 +6,42 @@ import { FcGoogle } from "react-icons/fc";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FiShield } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 function Login() {
+  const [identifier, setidentifier] = useState("");
+  const [password, setpassword] = useState("");
+  const navigate = useNavigate();
+  const loginObj = {
+    identifier,
+    password,
+  };
+
+  const handleSubmit = async () => {
+    // e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:7052/api/v1/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginObj),
+        credentials: "include",
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.message);
+        return;
+      }
+      alert(data.message);
+      navigate("/");
+      console.log(data);
+    } catch (error) {
+      console.log("error While Registering user: ", error);
+    }
+  };
+
   return (
     <div id="mainContainer">
       <div className="leftContainer">
@@ -51,9 +86,10 @@ function Login() {
             <label htmlFor="email">Email </label>
             <input
               className="input"
-              type="email"
-              placeholder="Enter your Email Address"
+              type="text"
+              placeholder="Enter your Registered Email or Username"
               name="email"
+              onChange={(e) => setidentifier(e.target.value)}
             />
             <label htmlFor="password">Password</label>
             <input
@@ -61,6 +97,7 @@ function Login() {
               type="password"
               placeholder="Enter your password"
               name="password"
+              onChange={(e) => setpassword(e.target.value)}
             />
           </div>
           <p className="forgetpassword">
@@ -72,11 +109,14 @@ function Login() {
           </div>
 
           <div className="submitBtn">
-            <button type="submit"> Login In</button>
+            <button type="submit" onClick={handleSubmit}>
+              {" "}
+              Login In
+            </button>
           </div>
         </div>
         <div className="bottomContents">
-          <div class="divider">
+          <div className="divider">
             <span></span>
             <p>or continue with</p>
             <span></span>

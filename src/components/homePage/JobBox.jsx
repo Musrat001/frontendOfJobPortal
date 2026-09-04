@@ -1,6 +1,6 @@
 import React from "react";
 import "../../css/jobBox.css";
-function JobBox({image}) {
+function JobBox({ image }) {
   return (
     <div className="mainContainer">
       <div className="leftHalf">

@@ -3,9 +3,7 @@ import "../../css/mainFooter.css";
 function MainFooter() {
   return (
     <footer className="footer">
-
       <div className="footer-container">
-
         {/* Brand Section */}
         <div className="footer-brand">
           <h2>
@@ -61,14 +59,12 @@ function MainFooter() {
           <a href="#">FAQs</a>
           <a href="#">Contact Support</a>
         </div>
-
-      </div>  
+      </div>
 
       {/* Bottom Section */}
       <div className="footer-bottom">
         <p>© 2024 JobFinder. All rights reserved.</p>
       </div>
-
     </footer>
   );
 }
