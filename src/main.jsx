@@ -10,13 +10,14 @@ import {
 
 import App from "./App.jsx";
 import Home from "./components/homePage/Home";
-import About from "./components/about/About";
+import About from "./components/about/About.jsx";
 import Contact from "./components/contact/Contact";
 import Jobs from "./components/jobs/Jobs.jsx";
 import Companies from "./components/companies/Companies.jsx";
 import Login from "./components/login/Login.jsx";
 import Register from "./components/register/Register.jsx";
 import User from "./components/user/User.jsx";
+import Profile from "./components/profile/Profile.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path="user/:userId" element={<User />} />
+      <Route path="profile" element={<Profile />} />
     </Route>,
   ),
 );

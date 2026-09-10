@@ -7,7 +7,8 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FiShield } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import UserContext from "../contexts/UserContext";
 function Login() {
   const [identifier, setidentifier] = useState("");
   const [password, setpassword] = useState("");
@@ -16,6 +17,8 @@ function Login() {
     identifier,
     password,
   };
+
+  const { setUser } = useContext(UserContext);
 
   const handleSubmit = async () => {
     // e.preventDefault();

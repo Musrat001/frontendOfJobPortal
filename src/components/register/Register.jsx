@@ -25,7 +25,7 @@ function Register() {
   const [username, setusername] = useState("");
   const [userType, setuserType] = useState("");
   const [password, setpassword] = useState("");
-  const [phoneNumber, setphoneNumber] = useState("       ");
+  const [phoneNumber, setphoneNumber] = useState("");
   const navigate = useNavigate();
 
   const registerObj = {
