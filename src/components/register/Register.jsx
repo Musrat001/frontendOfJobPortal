@@ -41,7 +41,7 @@ function Register() {
     // e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost:7052/api/v1/auth/register",
+        "https://backendofjobportal.onrender.com/api/v1/auth/register",
         {
           method: "POST",
           headers: {

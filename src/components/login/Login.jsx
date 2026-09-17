@@ -23,14 +23,17 @@ function Login() {
   const handleSubmit = async () => {
     // e.preventDefault();
     try {
-      const response = await fetch("http://localhost:7052/api/v1/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://backendofjobportal.onrender.com/api/v1/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loginObj),
+          credentials: "include",
         },
-        body: JSON.stringify(loginObj),
-        credentials: "include",
-      });
+      );
       const data = await response.json();
 
       if (!response.ok) {
