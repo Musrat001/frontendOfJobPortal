@@ -2,7 +2,7 @@ import tcsLogo from "../../assets/tcslogo.jpg";
 import amazonLogo from "../../assets/amazonlogo.jpg";
 import microsoftLogo from "../../assets/microsoftlogo.png";
 import Hero from "./Hero";
-import JobBox from "../jobBox/JobBox";
+import JobBox from "./JobBox";
 import "../../css/home.css";
 
 function Home() {

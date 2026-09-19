@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./components/header/Header";
 
 // import Footer from "./components/footer/Footer";
-import MainFooter from "./components/mainFooter/MainFooter";
+import MainFooter from "./pages/public/MainFooter";
 import UserContextProvider from "./components/contexts/UserContextProvider";
 // import { useContext } from "react";
 
