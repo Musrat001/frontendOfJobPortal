@@ -24,6 +24,7 @@ function Login() {
     // e.preventDefault();
     try {
       const response = await fetch(
+        // backend url
         "https://backendofjobportal.onrender.com/api/v1/auth/login",
         {
           method: "POST",
