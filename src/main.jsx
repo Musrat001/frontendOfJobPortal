@@ -9,15 +9,15 @@ import {
 } from "react-router-dom";
 
 import App from "./App.jsx";
-import Home from "./components/homePage/Home";
-import About from "./components/about/About.jsx";
-import Contact from "./components/contact/Contact";
-import Jobs from "./components/jobs/Jobs.jsx";
-import Companies from "./components/companies/Companies.jsx";
-import Login from "./components/login/Login.jsx";
-import Register from "./components/register/Register.jsx";
-import User from "./components/user/User.jsx";
-import Profile from "./components/profile/Profile.jsx";
+import Home from "./pages/public/Home.jsx";
+import About from "./pages/public/About.jsx";
+import Contact from "./pages/public/Contact.jsx";
+import Jobs from "./pages/public/Jobs.jsx";
+import Companies from "./pages/public/Companies.jsx";
+import Login from "./pages/auth/Login.jsx";
+import Register from "./pages/auth/Register.jsx";
+import User from "./pages/user/User.jsx";
+import Profile from "./pages/public/Profile.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
