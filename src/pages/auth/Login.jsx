@@ -42,7 +42,7 @@ function Login() {
         return;
       }
       alert(data.message);
-      navigate("/");
+      navigate("/userDashboard");
       console.log(data);
     } catch (error) {
       console.log("error While Registering user: ", error);

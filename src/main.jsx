@@ -29,7 +29,8 @@ const router = createBrowserRouter(
       <Route path="companies" element={<Companies />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
-      <Route path="user/:userId" element={<User />} />
+      <Route path="userDashboard" element={<User />} />
+      {/* <Route path="user/:userId" element={<User />} /> */}
       <Route path="profile" element={<Profile />} />
     </Route>,
   ),
