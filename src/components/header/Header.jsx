@@ -20,11 +20,6 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink className="NavLink" to="/companies">
-              Companies
-            </NavLink>
-          </li>
-          <li>
             <NavLink className="NavLink" to="/about">
               About
             </NavLink>
